@@ -5,6 +5,8 @@ namespace _1
         public Form1()
         {
             InitializeComponent();
+
+            txtConvertRubles.Text = Properties.Settings.Default.convertRubles.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -15,6 +17,9 @@ namespace _1
         private void button1_Click(object sender, EventArgs e)
         {
             string input = this.txtConvertRubles.Text;
+
+            Properties.Settings.Default.convertRubles = input;
+            Properties.Settings.Default.Save();
 
             MessageBox.Show(Logic.ConvertPrice(input));
         }
