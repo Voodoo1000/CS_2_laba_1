@@ -28,12 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            button1 = new Button();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            SuspendLayout();
+            // 
+            // button1
+            // 
+            resources.ApplyResources(button1, "button1");
+            button1.Name = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
+            label1.Click += label1_Click;
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(textBox1, "textBox1");
+            textBox1.Name = "textBox1";
+            // 
+            // Form1
+            // 
+            resources.ApplyResources(this, "$this");
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Controls.Add(button1);
+            Name = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button button1;
+        private Label label1;
+        private TextBox textBox1;
     }
 }
