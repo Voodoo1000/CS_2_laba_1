@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtConvertRubles = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -47,16 +47,16 @@
             label1.Name = "label1";
             label1.Click += label1_Click;
             // 
-            // textBox1
+            // txtConvertRubles
             // 
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.Name = "textBox1";
+            resources.ApplyResources(txtConvertRubles, "txtConvertRubles");
+            txtConvertRubles.Name = "txtConvertRubles";
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(textBox1);
+            Controls.Add(txtConvertRubles);
             Controls.Add(label1);
             Controls.Add(button1);
             Name = "Form1";
@@ -68,6 +68,6 @@
 
         private Button button1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtConvertRubles;
     }
 }
