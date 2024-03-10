@@ -17,8 +17,6 @@ namespace _1
             string input = this.txtConvertRubles.Text;
 
             MessageBox.Show(Logic.ConvertPrice(input));
-
-            txtConvertRubles.Clear();
         }
     }
 
